@@ -1,4 +1,4 @@
-import {Event} from '../Event'
+import { Event } from '../Event'
 import { Topics } from '../Topics'
 
 export interface TweetCreatedEvent extends Event {
