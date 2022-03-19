@@ -8,14 +8,16 @@ export abstract class AbstractEventProducer<T extends Event> {
 
     protected readonly producer: Producer = this.kafka.producer()
 
-    async send (topic: T['topic'], data: T['data']): Promise<RecordMetadata[]> {
+    async send(topic: T['topic'], data: T['data']): Promise<RecordMetadata[]> {
         await this.producer.connect()
 
         return await this.producer.send({
             topic,
-            messages: [{
-                value: JSON.stringify(data)
-            }],
+            messages: [
+                {
+                    value: JSON.stringify(data),
+                },
+            ],
             acks: Ack.ONLY_LEADER,
         })
     }

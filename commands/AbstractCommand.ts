@@ -4,7 +4,7 @@ import { Commands } from './Commands'
 export abstract class AbstractCommand extends AbstractDispatchable {
     abstract kind: Commands
 
-    setData () {
+    setData() {
         return null
     }
 }

@@ -9,6 +9,6 @@ export interface UserCreatedEvent extends Event {
         email: string
         firstname: string
         lastname: string
-    },
+    }
     version: number
 }

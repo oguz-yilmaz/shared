@@ -9,11 +9,11 @@ export abstract class AbstractEventConsumer<T extends Event> {
 
     abstract readonly topic: T['topic']
 
-    protected abstract getGroupId(): string;
+    protected abstract getGroupId(): string
 
-    abstract onMessage (data: T['data']): void
+    abstract onMessage(data: T['data']): void
 
-    async listen () {
+    async listen() {
         await this.consumer.connect()
 
         await this.consumer.subscribe({ topic: this.topic, fromBeginning: true })
