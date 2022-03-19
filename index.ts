@@ -4,6 +4,7 @@ export * from './events/producer/AbstractEventProducer'
 export * from './events/consumer/AbstractEventConsumer'
 export * from './events/events/TweetCreatedEvent'
 export * from './events/events/UserCreatedEvent'
+export * from './events/events/CommentCreatedEvent'
 export * from './events/Topics'
 export * from './events/Event'
 
