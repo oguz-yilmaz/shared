@@ -1,0 +1,33 @@
+{
+  "name": "@o.yilmaz/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "rimraf": "./node_modules/rimraf/bin.js",
+    "clean": "rimraf -rf build/*",
+    "build": "npm run clean && tsc --build",
+    "test": "jest --watchAll --no-cache"
+  },
+  "keywords": [],
+  "author": "Oguz Yilmaz",
+  "license": "ISC",
+  "dependencies": {
+    "@o.yilmaz/js-dispatcher": "^1.0.4",
+    "kafkajs": "^1.16.0",
+    "epxress": "0.0.1-security",
+    "express-validator": "^6.14.0",
+    "@types/jsonwebtoken": "^8.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "@types/cookie-session": "^2.0.44",
+    "@types/express": "^4.17.13"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4",
+    "rimraf": "^3.0.1"
+  }
+}
