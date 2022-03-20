@@ -12,6 +12,7 @@
     "clean": "rimraf -rf build/*",
     "build": "npm run clean && tsc --build",
     "test": "jest --watchAll --no-cache",
+    "pub": "bash ./scripts/pub.sh",
     "prettify": "prettier --config .prettierrc  './**/*.ts' --write",
     "prepare": "husky install"
   },
