@@ -11,7 +11,7 @@ export abstract class AbstractEventProducer<T extends Event> {
     async send(topic: T['topic'], data: T['data']): Promise<RecordMetadata[]> {
         await this.producer.connect()
 
-        return await this.producer.send({
+        const recordMetadata: RecordMetadata[] = await this.producer.send({
             topic,
             messages: [
                 {
@@ -20,5 +20,9 @@ export abstract class AbstractEventProducer<T extends Event> {
             ],
             acks: Ack.ONLY_LEADER,
         })
+
+        console.log('Event published on topic: ', topic, ' with data: ', data)
+
+        return recordMetadata
     }
 }
