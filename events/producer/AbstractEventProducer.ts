@@ -4,7 +4,7 @@ import { Event } from '../Event'
 import { Ack } from '../Kafka'
 
 export abstract class AbstractEventProducer<T extends Event> {
-    readonly kafka: Kafka = kafka
+    protected readonly kafka: Kafka = kafka
 
     protected readonly producer: Producer = this.kafka.producer()
 
