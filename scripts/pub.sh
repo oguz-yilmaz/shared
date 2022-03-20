@@ -10,4 +10,7 @@ git commit -m "$commit_message"
 
 npm run build
 
+npm version patch
+npm publish --access=public
+
 echo "Done"
