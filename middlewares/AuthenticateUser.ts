@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import { NotAuthorizedError } from '../errors/NotAuthorizedError'
 
-export const authenticateUser = (req: Request, res: Response, next: NextFunction) => {
+export const AuthenticateUser = (req: Request, res: Response, next: NextFunction) => {
     if (!req.currentUser) {
         throw new NotAuthorizedError()
     }

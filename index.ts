@@ -1,5 +1,3 @@
-export * from './aggretages/AbstractAggregateRoot'
-
 export * from './events/producer/AbstractEventProducer'
 export * from './events/consumer/AbstractEventConsumer'
 export * from './events/events/TweetCreatedEvent'
@@ -20,7 +18,4 @@ export * from './errors/NotFoundError'
 export * from './errors/RequestValidationError'
 export * from './errors/CustomError'
 
-export * from './services/AbstractService'
-
-export * from './commands/AbstractCommand'
 export * from './commands/Commands'

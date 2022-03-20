@@ -3,9 +3,8 @@ import { Topics } from '../Topics'
 
 export interface UserCreatedEvent extends Event {
     topic: Topics.Users
-    aggregateType: 'User'
-    aggregateId?: number
     data: {
+        id: string
         email: string
         firstname: string
         lastname: string

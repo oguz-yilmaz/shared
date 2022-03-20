@@ -3,11 +3,11 @@ import { Topics } from '../Topics'
 
 export interface TweetCreatedEvent extends Event {
     topic: Topics.Tweets
-    aggregateType: 'Tweet'
-    aggregateId?: number
     data: {
+        id: string
         content: string
         user: {
+            id: string
             email: string
             firstname: string
             lastname: string

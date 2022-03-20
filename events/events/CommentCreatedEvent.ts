@@ -3,12 +3,12 @@ import { Topics } from '../Topics'
 
 export interface CommentCreatedEvent extends Event {
     topic: Topics.Comments
-    aggregateType: 'Comment'
-    aggregateId?: number
     data: {
-        tweetId: number
+        id: string
+        tweetId: string
         content: string
         user: {
+            id: string
             email: string
             firstname: string
             lastname: string
