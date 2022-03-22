@@ -1,7 +1,7 @@
 import { Event } from '../Event'
 import { Topics } from '../Topics'
 
-export interface UserCreatedEvent extends Event {
+export interface UserUpdatedEvent extends Event {
     topic: Topics.Users
     data: {
         id: string
