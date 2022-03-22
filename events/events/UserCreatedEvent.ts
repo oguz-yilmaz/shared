@@ -10,5 +10,4 @@ export interface UserCreatedEvent extends Event {
         firstname: string
         lastname: string
     }
-    version: number
 }
