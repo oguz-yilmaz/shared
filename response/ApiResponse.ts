@@ -9,7 +9,13 @@ export interface TwResponse {
 }
 
 export abstract class ApiResponse<T extends AbstractConverter, M extends Model<Document>> extends Response {
-    protected abstract readonly converter: T
+    protected readonly converter: T
+
+    constructor(converter: T) {
+        super()
+
+        this.converter = converter
+    }
 
     send(data: M[], message = ''): TwResponse {
         const transformed: modelCollection = this.converter.transform(data)
