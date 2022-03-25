@@ -20,4 +20,7 @@ export * from './errors/NotFoundError'
 export * from './errors/RequestValidationError'
 export * from './errors/CustomError'
 
+export * from './response/ApiResponse'
+export * from './converters/AbstractConverter'
+
 export * from './commands/Commands'
