@@ -1,5 +1,5 @@
 import { Response } from 'express'
-import { Model, Document } from 'mongoose';
+import { Model, Document } from 'mongoose'
 import { AbstractConverter, modelCollection } from '../converters/AbstractConverter'
 
 export interface TwResponse {
@@ -17,7 +17,7 @@ export abstract class ApiResponse<T extends AbstractConverter, M extends Model<D
         return {
             success: true,
             message,
-            data: transformed
+            data: transformed,
         }
     }
 }
