@@ -8,7 +8,7 @@ export interface TwResponse {
     data: modelCollection
 }
 
-export abstract class ApiResponse<T extends AbstractConverter, M extends Model<Document>> extends Response {
+export class ApiResponse<T extends AbstractConverter, M extends Model<Document>> extends Response {
     protected readonly converter: T
 
     constructor(converter: T) {
