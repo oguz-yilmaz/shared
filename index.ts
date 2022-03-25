@@ -21,6 +21,6 @@ export * from './errors/RequestValidationError'
 export * from './errors/CustomError'
 
 export * from './response/ApiResponse'
-export * from './converters/AbstractConverter'
+export * from './converter/AbstractConverter'
 
 export * from './commands/Commands'
