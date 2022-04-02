@@ -11,9 +11,7 @@ export abstract class AbstractEventConsumer<T extends Event> {
 
     protected abstract getGroupId(): string
 
-    protected async onMessage(data: T['data']) {
-        return data
-    }
+    abstract onMessage(data: T['data']): void
 
     async listen() {
         await this.consumer.connect()
