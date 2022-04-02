@@ -18,13 +18,17 @@ declare global {
 }
 
 export const CurrentUser = (req: Request, res: Response, next: NextFunction) => {
-    if (!req.session?.jwt) {
+    if (!req.headers?.authorization) {
         return next()
     }
 
     try {
-        req.currentUser = jwt.verify(req.session.jwt, process.env.JWT_KEY!) as UserPayload
-    } catch (e) {}
+        const bearerParts = (req.headers.authorization as string).split(' ')
+        const bearerToken = bearerParts[1]
+
+        req.currentUser = jwt.verify(bearerToken, process.env.JWT_KEY!) as UserPayload
+    }
+    catch (e) {}
 
     next()
 }
