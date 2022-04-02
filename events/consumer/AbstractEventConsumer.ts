@@ -11,7 +11,9 @@ export abstract class AbstractEventConsumer<T extends Event> {
 
     protected abstract getGroupId(): string
 
-    abstract onMessage(data: T['data']): void
+    protected async onMessage(data: T['data']) {
+        return data
+    }
 
     async listen() {
         await this.consumer.connect()
@@ -20,7 +22,7 @@ export abstract class AbstractEventConsumer<T extends Event> {
 
         await this.consumer.run({
             eachMessage: async ({ topic, partition, message }: any) => {
-                this.onMessage(message.value)
+                await this.onMessage(message.value)
             },
         })
     }
