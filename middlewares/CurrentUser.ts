@@ -27,8 +27,7 @@ export const CurrentUser = (req: Request, res: Response, next: NextFunction) => 
         const bearerToken = bearerParts[1]
 
         req.currentUser = jwt.verify(bearerToken, process.env.JWT_KEY!) as UserPayload
-    }
-    catch (e) {
+    } catch (e) {
         console.log('CurrentUserError -> ', e)
     }
 

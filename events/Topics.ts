@@ -1,20 +1,10 @@
-enum Tweets {
-    create = 'tweets-create-topic',
-    update = 'tweets-update-topic',
-}
+export enum Topics {
+    TweetCreated = 'tweets-created-topic',
+    TweetUpdated = 'tweets-updated-topic',
 
-enum Users {
-    create = 'users-create-topic',
-    update = 'users-update-topic',
-}
+    UsersCreated = 'users-created-topic',
+    UsersUpdated = 'users-updated-topic',
 
-enum Comments {
-    create = 'comments-create-topic',
-    update = 'comments-update-topic',
-}
-
-export const Topics = {
-    Tweets,
-    Users,
-    Comments,
+    CommentsCreated = 'users-created-comments',
+    CommentsUpdated = 'users-updated-comments',
 }

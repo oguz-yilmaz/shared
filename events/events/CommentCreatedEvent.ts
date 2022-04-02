@@ -2,7 +2,7 @@ import { Event } from '../Event'
 import { Topics } from '../Topics'
 
 export interface CommentCreatedEvent extends Event {
-    topic: Topics.Comments
+    topic: Topics.CommentsCreated
     data: {
         id: string
         tweetId: string
