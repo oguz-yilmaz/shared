@@ -6,7 +6,13 @@ export interface TweetUpdatedEvent extends Event {
     data: {
         id: string
         content: string
-        userId: string
+        user: {
+            id: string
+            username: string
+            email: string
+            firstname: string
+            lastname: string
+        }
         version: number
     }
 }

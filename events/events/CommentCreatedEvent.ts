@@ -9,6 +9,7 @@ export interface CommentCreatedEvent extends Event {
         content: string
         user: {
             id: string
+            username: string
             email: string
             firstname: string
             lastname: string
