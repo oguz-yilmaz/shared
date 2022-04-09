@@ -20,7 +20,7 @@ export abstract class AbstractEventConsumer<T extends Event> {
 
         await this.consumer.run({
             eachMessage: async ({ topic, partition, message }: any) => {
-                await this.onMessage(JSON.parse(message.toString()))
+                await this.onMessage(JSON.parse(message.value.toString()))
             },
         })
     }
